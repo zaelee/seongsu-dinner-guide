@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="성수 저녁 후보 5곳과 대안 2곳의 메뉴, 위치, 예약, 사진 비교">
+  <meta name="description" content="성수 점심 후보 5곳과 대안 2곳의 메뉴, 위치, 예약, 사진 비교">
   <meta name="theme-color" content="#f4efe6">
-  <title>성수 저녁 후보 5+2</title>
+  <title>성수 점심 후보 5+2</title>
   <style>
     :root {
       --ink: #18201d;
@@ -130,20 +130,21 @@
       box-shadow: var(--shadow);
     }
     .place-card[hidden] { display: none; }
-    .place-grid { display: grid; grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr); }
+    .place-grid { display: grid; grid-template-columns: minmax(360px, .95fr) minmax(0, 1.05fr); align-items: stretch; }
 
     .gallery {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 240px 190px;
+      grid-template-rows: minmax(240px, 1.25fr) minmax(190px, 1fr);
       gap: 3px;
+      height: 100%;
       min-height: 433px;
-      background: var(--line);
+      background: var(--card);
     }
-    .gallery img { width: 100%; height: 100%; object-fit: cover; background: #ddd5c7; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; background: var(--card); }
     .gallery img:first-child { grid-column: 1 / -1; }
 
-    .place-body { display: flex; flex-direction: column; padding: 30px; }
+    .place-body { display: flex; min-width: 0; flex-direction: column; padding: 32px; }
     .topline { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 13px; }
     .pill {
       display: inline-flex;
@@ -216,7 +217,7 @@
     @media (max-width: 820px) {
       .hero { padding-top: 48px; }
       .decision, .place-grid { grid-template-columns: 1fr; }
-      .gallery { grid-template-rows: 210px 150px; min-height: 363px; }
+      .gallery { grid-template-rows: 210px 150px; height: auto; min-height: 363px; }
       .section-head { align-items: start; flex-direction: column; }
     }
     @media (max-width: 520px) {
@@ -234,9 +235,9 @@
 </head>
 <body>
   <header class="hero wrap">
-    <p class="eyebrow">Seongsu dinner shortlist</p>
-    <h1>성수 저녁,<br>어디로 갈까?</h1>
-    <p class="hero-copy">보내준 네이버 지도 5곳에 메모 속 대안인 <b>미키스시</b>와 <b>뼈탄집</b>까지 더했다. 사진, 대표 메뉴, 위치와 예약 포인트만 빠르게 비교하는 5+2 후보표.</p>
+    <p class="eyebrow">Seongsu lunch shortlist</p>
+    <h1>성수 점심,<br>어디로 갈까?</h1>
+    <p class="hero-copy">보내준 네이버 지도 5곳에 메모 속 대안인 <b>미키스시</b>와 <b>뼈탄집</b>까지 더했다. 사진, 대표 메뉴, 위치와 예약 포인트만 빠르게 비교하는 점심 5+2 후보표.</p>
     <p class="updated">2026년 8월 12일 공개 정보 기준 · 가격과 영업시간은 방문 당일 최종 확인 권장</p>
   </header>
 
@@ -248,7 +249,7 @@
       </div>
       <div class="decision-box">
         <h2>상황별 선택</h2>
-        <p><strong>재미·가성비</strong> 코노미스시 · <strong>가벼운 한 끼</strong> 파작 · <strong>여럿이 요리</strong> 전자방 · <strong>예약 없이 일식</strong> 마루마끼 · <strong>늦은 고기</strong> 잠수교집</p>
+        <p><strong>재미·가성비</strong> 코노미스시 · <strong>가벼운 점심</strong> 파작 · <strong>여럿이 요리</strong> 전자방 · <strong>예약 없이 일식</strong> 마루마끼 · <strong>냉삼 점심</strong> 잠수교집</p>
       </div>
     </section>
 
@@ -408,7 +409,7 @@
           <div class="place-body">
             <div class="topline"><span class="pill">후보 5</span><span class="pill note">못 가면 뼈탄집</span><span class="pill good">네이버 예약 표시</span></div>
             <div class="place-title"><div><h3>잠수교집 성수 직영점</h3><p class="category">급랭삼겹살 · 돼지고기구이</p></div><span class="rank">05</span></div>
-            <p class="summary">얇은 급랭삼겹살과 밑반찬, 찌개류를 함께 먹는 레트로 고깃집. 새벽까지 영업하는 정보가 확인돼 일정이 늦어질 때 특히 유리하다.</p>
+            <p class="summary">얇은 급랭삼겹살과 밑반찬, 찌개류를 함께 먹는 레트로 고깃집. 점심 영업은 14시까지라 늦지 않게 도착해야 하고, 이후에는 16시부터 다시 문을 연다.</p>
             <dl class="facts">
               <div class="fact"><dt>위치</dt><dd>아차산로 137, 1층</dd></div>
               <div class="fact"><dt>접근</dt><dd>성수역 약 300m</dd></div>
@@ -513,7 +514,7 @@
     </section>
   </main>
 
-  <footer class="wrap">성수 저녁 후보 정리 · 외부 사진과 장소 정보의 권리는 각 원저작자와 제공처에 있습니다.</footer>
+  <footer class="wrap">성수 점심 후보 정리 · 외부 사진과 장소 정보의 권리는 각 원저작자와 제공처에 있습니다.</footer>
 
   <script>
     const buttons = document.querySelectorAll('[data-filter]');
